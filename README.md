@@ -1,2 +1,2 @@
-# react-demos
-react使用方法和特性的demo集合
+# react-notebook
+用react构建的笔记本应用
