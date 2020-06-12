@@ -5,7 +5,7 @@ class DataBind extends Component {
         super(props)
         this.state = {
             inputValue: '添加内容',
-            contentList: []
+            contentList: ['内容1','内容2']
         }
     }
     render() {
@@ -13,11 +13,19 @@ class DataBind extends Component {
             <Fragment>
                 <div>
                     <input value={this.state.inputValue} onChange={this.inputChange.bind(this)} />
-                    <button>添加内容</button>
+                    <button onClick={this.addList.bind(this)}>添加内容</button>
                 </div>
                 <ul>
-                    <li>内容1</li>
-                    <li>内容2</li>
+                    {
+                        this.state.contentList.map((item, index)=> {
+                            return (
+                                <li 
+                                key={index} 
+                                onClick={this.deleteItem.bind(this,index)}
+                                >{item}</li>
+                            )
+                        })
+                    }
                 </ul>
             </Fragment>
         )
@@ -26,6 +34,17 @@ class DataBind extends Component {
         console.log(e.target.value)
         this.setState({
             inputValue: e.target.value
+        })
+    }
+    addList() {
+        this.setState({
+            contentList: [...this.state.contentList,this.state.inputValue],
+            inputValue: ''
+        })
+    }
+    deleteItem(index) {
+        this.setState({
+            contentList: this.state.contentList.filter((item,itemIndex)=> itemIndex != index)
         })
     }
 }
