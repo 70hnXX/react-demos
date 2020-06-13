@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
-import PropFather from './propTypes/Father'
-
+import DataBind from './dataBind/DataBind'
+// import PropFather from './propTypes/Father'
+// import RefDemo from './ref/Ref.jsx'
 class App extends Component {
     render() {
         return ( 
           <div >
-            <PropFather />
+            <DataBind />
+            {/* <PropFather /> */}
+            {/* <RefDemo /> */}
           </div>
         )
     }

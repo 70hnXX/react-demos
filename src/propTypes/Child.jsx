@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Child extends Component {
     constructor(props) {
@@ -14,6 +15,17 @@ class Child extends Component {
         console.log(this.props.index)
         this.props.deleteItem(this.props.index)
     }
+}
+
+// 类型校验
+Child.propTypes = {
+    index: PropTypes.number,
+    content: PropTypes.string,
+    deleteItem: PropTypes.func
+}
+
+Child.defaultProps={
+    conten: '默认内容'
 }
  
 export default Child;

@@ -15,7 +15,7 @@ class DataBind extends Component {
                     <input value={this.state.inputValue} onChange={this.inputChange.bind(this)} />
                     <button onClick={this.addList.bind(this)}>添加内容</button>
                 </div>
-                <ul>
+                <ul ref={(ul)=> {this.ul = ul}}>
                     {
                         this.state.contentList.map((item, index)=> {
                             return (
@@ -40,6 +40,9 @@ class DataBind extends Component {
         this.setState({
             contentList: [...this.state.contentList,this.state.inputValue],
             inputValue: ''
+        },() => {
+            // setState是一个异步操作,在它的回调函数里面是虚拟dom更新后执行的代码
+            console.log('执行插入后的列表数量为: ' + this.ul.querySelectorAll('li').length)
         })
     }
     deleteItem(index) {
