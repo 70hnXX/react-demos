@@ -44,7 +44,7 @@ class DataBind extends Component {
     }
     deleteItem(index) {
         this.setState({
-            contentList: this.state.contentList.filter((item,itemIndex)=> itemIndex != index)
+            contentList: this.state.contentList.filter((item,itemIndex)=> itemIndex !== index)
         })
     }
 }
