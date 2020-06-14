@@ -3,7 +3,9 @@ import React, { Component } from 'react'
 // import PropFather from './propTypes/Father'
 // import RefDemo from './ref/Ref.jsx'
 // import LifeCycle from './lifeCycle/Father'
-import AxiosDemo from './axiosDemo/index'
+// import AxiosDemo from './axiosDemo/index'
+// import AnimationDemo from './animateDemo/index'
+import AnimationGroup from './animateDemo/Father'
 class App extends Component {
     render() {
         return ( 
@@ -12,7 +14,9 @@ class App extends Component {
             {/* <PropFather /> */}
             {/* <RefDemo /> */}
             {/* <LifeCycle /> */}
-            <AxiosDemo />
+            {/* <AxiosDemo /> */}
+            {/* <AnimationDemo /> */}
+            <AnimationGroup />
           </div>
         )
     }
