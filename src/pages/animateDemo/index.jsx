@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { CSSTransition } from 'react-transition-group'
+import { Link } from 'react-router-dom'
 import './index.css'
 
 class AnimateDemo extends Component {
@@ -13,6 +14,7 @@ class AnimateDemo extends Component {
     render() { 
         return ( 
             <div>
+                <p><Link to="/">首页</Link></p>
                 <CSSTransition
                     in={this.state.isShow}
                     timeout={2000}

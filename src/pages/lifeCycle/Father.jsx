@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom'
 import Child from './Child'
 
 class Father extends Component {
@@ -38,6 +39,7 @@ class Father extends Component {
         console.log("render---------渲染")
         return (
             <Fragment>
+                <p><Link to="/">首页</Link></p>
                 <input type="text" value={this.state.inputValue} onChange={this.inputOnchange.bind(this)} />
                 <button onClick={this.addItem.bind(this)}>添加内容</button>
                 <ul>

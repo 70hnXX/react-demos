@@ -1,13 +1,18 @@
 import React,{Component} from 'react'
+import { Link } from 'react-router-dom'
 
 class CreateElementDemo extends Component {
     render() {
         return (
+            
             // 第一种
-            <ul className="list">
-                <li>hello</li>
-                <li>world</li>
-            </ul>
+            <div>
+                <p><Link to="/">首页</Link></p>
+                <ul className="list">
+                    <li>hello</li>
+                    <li>world</li>
+                </ul>
+            </div>
         )
         // 第二种
         // var child1 = React.createElement('li',null,'hello')

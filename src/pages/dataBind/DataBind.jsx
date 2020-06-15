@@ -1,5 +1,5 @@
 import React,{Component,Fragment} from 'react'
-
+import { Link } from 'react-router-dom'
 class DataBind extends Component {
     constructor(props) {
         super(props)
@@ -11,6 +11,7 @@ class DataBind extends Component {
     render() {
         return(
             <Fragment>
+                <p><Link to="/">首页</Link></p>
                 <div>
                     <input value={this.state.inputValue} onChange={this.inputChange.bind(this)} />
                     <button onClick={this.addList.bind(this)}>添加内容</button>

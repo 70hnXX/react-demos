@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom'
 import Axios from 'axios';
 
 class AxiosDemo extends Component {
@@ -19,6 +20,8 @@ class AxiosDemo extends Component {
     render() { 
         return ( 
            <Fragment>
+               <p><Link to="/">首页</Link></p>
+               <p>F12打开控制台查看Network</p>
                 {/* <button>获取数据</button> */}
                 <div>{this.state.response}</div>
            </Fragment>
