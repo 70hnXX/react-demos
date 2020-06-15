@@ -20,7 +20,7 @@ class Index extends Component {
         <p><Link to="/fragment">fragment示例</Link></p>
         <p><Link to="/lifeCycle">组件生命周期示例</Link></p>
         <p><Link to="/propTypes">父子组件传值示例</Link></p>
-        <p><Link to="/ref">父子组件传值示例</Link></p>
+        <p><Link to="/ref">ref示例</Link></p>
         <h2>React路由示例</h2>
         <h2>Redux示例</h2>
       </div>
