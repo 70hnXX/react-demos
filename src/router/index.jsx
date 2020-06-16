@@ -13,6 +13,9 @@ import Fragment from '../pages/Fragment/MiutyElementsInRoot'
 import LifeCycle from '../pages/lifeCycle/Father'
 import PropTypes from '../pages/propTypes/Father'
 import Ref from '../pages/ref/Ref'
+import FatherPage from '../pages/routeDemo/FatherPage'
+import ChildPageQuery from '../pages/routeDemo/ChildPageQuery'
+import ChildPageUrl from '../pages/routeDemo/ChildPageUrl'
 
 function AppRouter() {
     return (
@@ -29,6 +32,9 @@ function AppRouter() {
           <Route path="/lifeCycle" component={LifeCycle}></Route>
           <Route path="/propTypes" component={PropTypes}></Route>
           <Route path="/ref" component={Ref}></Route>
+          <Route path="/routerDemo" exact component={FatherPage}></Route>
+          <Route path="/routerDemo/ChildPageQuery" component={ChildPageQuery}></Route>
+          <Route path="/routerDemo/ChildPageUrl/:id?sid=&token=" component={ChildPageUrl}></Route>
         </Router>
       </div>
     )
