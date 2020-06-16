@@ -33,8 +33,8 @@ function AppRouter() {
           <Route path="/propTypes" component={PropTypes}></Route>
           <Route path="/ref" component={Ref}></Route>
           <Route path="/routerDemo" exact component={FatherPage}></Route>
-          <Route path="/routerDemo/ChildPageQuery" component={ChildPageQuery}></Route>
-          <Route path="/routerDemo/ChildPageUrl/:id?sid=&token=" component={ChildPageUrl}></Route>
+          <Route path="/routerDemo/childPageQuery" component={ChildPageQuery}></Route>
+          <Route path="/routerDemo/childPageUrl/:id?sid=&token=" component={ChildPageUrl}></Route>
         </Router>
       </div>
     )
