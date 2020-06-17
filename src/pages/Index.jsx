@@ -23,6 +23,8 @@ class Index extends Component {
         <p><Link to="/ref">ref示例</Link></p>
         <h2>React路由示例</h2>
         <p><Link to="/routerDemo">路由示例</Link></p>
+        <p><Link to="/routeNest">嵌套路由示例</Link></p>
+        <p><Link to="/dynamicRoute">根据json动态生成路由</Link></p>
         <h2>Redux示例</h2>
       </div>
     );

@@ -16,6 +16,8 @@ import Ref from '../pages/ref/Ref'
 import FatherPage from '../pages/routeDemo/FatherPage'
 import ChildPageQuery from '../pages/routeDemo/ChildPageQuery'
 import ChildPageUrl from '../pages/routeDemo/ChildPageUrl'
+import RouteNest from '../pages/routeNest/Index'
+import DynamicRoute from '../pages/dynamicRoute/Index'
 
 function AppRouter() {
     return (
@@ -35,6 +37,8 @@ function AppRouter() {
           <Route path="/routerDemo" exact component={FatherPage}></Route>
           <Route path="/routerDemo/childPageQuery" component={ChildPageQuery}></Route>
           <Route path="/routerDemo/childPageUrl/:id" component={ChildPageUrl}></Route>
+          <Route path="/routeNest" component={RouteNest}></Route>
+          <Route path="/dynamicRoute" component={DynamicRoute}></Route>
         </Router>
       </div>
     )
