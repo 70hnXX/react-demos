@@ -8,10 +8,11 @@ class FatherPage extends Component {
     this.jump = this.jump.bind(this)
     this.jumpState = this.jumpState.bind(this)
   }
+
   render() {
     return (
       <div>
-        <p><Link to={{pathname: "/routerDemo/childPageUrl/123"}}>跳转到子页面,使用url的形式带上query参数,刷新不会消失</Link></p>
+        <p><Link to={{pathname: "/routerDemo/childPageUrl/2?a=1&b=2"}}>跳转到子页面,使用url的形式带上query参数,刷新不会消失</Link></p>
         <p><button onClick={this.jump}>使用函数携带query进行跳转(query中的参数刷新消失)</button></p>
         <p><button onClick={this.jumpState}>使用函数携带state进行跳转(query中的参数刷新消失)</button></p>
       </div>
